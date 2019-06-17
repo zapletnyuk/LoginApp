@@ -24,5 +24,10 @@ namespace LoginApp
         {
             InitializeComponent();
         }
+
+        private void ExitImg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
