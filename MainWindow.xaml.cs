@@ -29,5 +29,35 @@ namespace LoginApp
         {
             this.Close();
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string login = LoginTBox.Text;
+                string password = PasswordBox.Password.ToString();
+                bool check = false;
+                using (UserContext db = new UserContext())
+                {
+                    foreach (User u in db.Users)
+                    {
+                        if((u.Login == login) && (u.Password == password))
+                        {
+                            MessageBox.Show("User found. Succcess.");
+                            check = true;
+                            break;
+                        }
+                    }
+                    if (!check)
+                    {
+                        MessageBox.Show("Incorrect data.");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

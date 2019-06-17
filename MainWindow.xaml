@@ -27,11 +27,11 @@
         <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,100">
             <TextBox Text="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox materialDesign:HintAssist.Hint="EMAIL" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" FontFamily="Century" FontSize="18"/>
-                <PasswordBox materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" FontFamily="Century" FontSize="18"/>
+                <TextBox x:Name="LoginTBox" materialDesign:HintAssist.Hint="EMAIL" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" FontFamily="Century" FontSize="18"/>
+                <PasswordBox x:Name="PasswordBox" materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" FontFamily="Century" FontSize="18"/>
             </StackPanel>
         </Grid>
-        <Button VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN"/>
+        <Button x:Name="LoginBtn" VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN" Click="LoginBtn_Click"/>
         <TextBlock Text="Forgot Password?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50" Foreground="Gray" Cursor="Hand"/>
     </Grid>
 </Window>
