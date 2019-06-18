@@ -59,5 +59,12 @@ namespace LoginApp
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Owner = this;
+            registerWindow.Show();
+        }
     }
 }
