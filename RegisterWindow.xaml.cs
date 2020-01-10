@@ -27,7 +27,7 @@ namespace LoginApp
 
         private void ExitImg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
@@ -71,7 +71,7 @@ namespace LoginApp
                     db.Users.Add(user);
                     db.SaveChanges();
                     MessageBox.Show("New user is created.");
-                    this.Close();
+                    Close();
                 }
             }
             catch(Exception ex)

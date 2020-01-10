@@ -12,5 +12,6 @@ namespace LoginApp
         public UserContext() : base("UserContext")
         { }
         public DbSet<User> Users { get; set; }
+        //Added a comment))
     }
 }
