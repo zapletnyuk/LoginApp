@@ -13,5 +13,6 @@ namespace LoginApp
         { }
         public DbSet<User> Users { get; set; }
         //Added a comment))
+        //New comment
     }
 }
